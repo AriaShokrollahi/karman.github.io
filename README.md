@@ -44,7 +44,7 @@ Karman یک رابط کاربری مدرن برای معرفی یک پلتفرم
 
 ## 🖥️ Preview
 
-![Karman Landing Page](./assets/preview.png)
+![Karman Landing Page](./image/screencapture-192-168-1-2-5501-karman-landing-html-2026-09-04-12_40_47.png)
 
 ## 📱 Responsive Design
 
