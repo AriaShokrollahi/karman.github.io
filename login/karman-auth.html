@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کارمان — ورود و ثبت‌نام</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/karman-landing.css">
+</head>
+<body>
+
+  <div class="topbar">
+  <div class="brand"><span class="dot"></span>کارمان</div>
+  <div style="display:flex;gap:18px;align-items:center;">
+    <a href="../karman-landing.html" class="back-link">بازگشت به صفحهٔ اصلی ←</a>
+  </div>
+</div>
+
+<div class="shell">
+  <div class="auth-card">
+
+    <div class="side">
+      <div>
+        <div class="eyebrow"><span class="sq"></span>پلتفرم منابع انسانی</div>
+        <h2>هر پروندهٔ کارمند، در یک جا — با <em>مهر تأیید انسان</em> روی هر تصمیم هوش مصنوعی</h2>
+      </div>
+      <div class="mini-scene">
+        <div class="mini-doc">
+          <div class="l w70"></div><div class="l w50"></div><div class="l w70"></div>
+        </div>
+        <div class="mini-stamp">تأیید<br>شد</div>
+      </div>
+      <div class="side-stat">
+        <div><b>&lt;30</b><span>دقیقه اجرای حقوق</span></div>
+        <div><b>500+</b><span>سازمان هدف سال اول</span></div>
+      </div>
+    </div>
+
+    <div class="form-side">
+      <div class="tabs">
+        <div class="tab active" data-target="login">ورود</div>
+        <div class="tab" data-target="signup">ثبت‌نام</div>
+      </div>
+
+      <div class="panel-group active" id="login">
+        <div class="form-title">خوش آمدید</div>
+        <div class="form-sub">با شمارهٔ موبایل سازمانی خود وارد شوید.</div>
+        <div class="field">
+          <label>شمارهٔ موبایل</label>
+          <input type="tel" class="mono-field" placeholder="09xxxxxxxxx">
+        </div>
+        <button class="submit-btn">ارسال کد ورود</button>
+        <div class="otp-note">کد یک‌بارمصرف به شمارهٔ شما پیامک می‌شود — <b>بدون رمز عبور</b></div>
+        <div class="divider">یا</div>
+        <div class="field">
+          <label>ورود با ایمیل و رمز عبور</label>
+          <input type="email" placeholder="you@company.com" style="margin-bottom:10px;">
+          <input type="password" placeholder="رمز عبور">
+        </div>
+        <button class="submit-btn" style="background:var(--black);">ورود</button>
+      </div>
+
+      <div class="panel-group" id="signup">
+        <div class="form-title">ساخت حساب سازمان</div>
+        <div class="form-sub">حساب کارمان شرکت خود را در چند دقیقه بسازید.</div>
+        <div class="field">
+          <label>نام شرکت</label>
+          <input type="text" placeholder="مثلاً استودیو طراحی رستا">
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>نام و نام خانوادگی</label>
+            <input type="text" placeholder="نام شما">
+          </div>
+          <div class="field">
+            <label>شمارهٔ موبایل</label>
+            <input type="tel" class="mono-field" placeholder="09xxxxxxxxx">
+          </div>
+        </div>
+        <div class="field">
+          <label>ایمیل کاری</label>
+          <input type="email" placeholder="you@company.com">
+        </div>
+        <button class="submit-btn">شروع رایگان</button>
+        <div class="terms">با ثبت‌نام، <a href="#">شرایط استفاده</a> و <a href="#">حریم خصوصی</a> کارمان را می‌پذیرید.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel-group');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

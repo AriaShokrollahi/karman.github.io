@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کارمان — دستیار هوش مصنوعی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span>کارمان</div>
+  <a href="../karman-landing.html" class="back-link">بازگشت به صفحهٔ اصلی ←</a>
+</div>
+
+<div class="app">
+  <aside class="sidebar">
+    <button class="new-chat" id="newChat">+ گفتگوی جدید</button>
+    <div class="side-label">گفتگوهای اخیر</div>
+    <div class="conv-item active">مانده مرخصی استحقاقی</div>
+    <div class="conv-item">سیاست مرخصی زایمان</div>
+    <div class="conv-item">نحوهٔ محاسبهٔ اضافه‌کاری</div>
+    <div class="conv-item">مهلت ارسال مدارک بیمه</div>
+    <div class="conv-item">قانون مرخصی بدون حقوق</div>
+    <div class="side-foot"><span class="av"></span>واحد منابع انسانی</div>
+  </aside>
+
+  <div class="chat-col">
+    <div class="chat-head">
+      <div class="assistant-av"></div>
+      <div>
+        <h1>دستیار سیاست‌های منابع انسانی</h1>
+        <p>پاسخ‌ها بر اساس مستندات داخلی شرکت شما — نه حافظهٔ عمومی</p>
+      </div>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="msg-row bot">
+        <div class="msg-av"></div>
+        <div class="bubble">سلام! من دستیار منابع انسانی کارمان هستم. می‌تونم دربارهٔ مرخصی، بیمه، حقوق و سیاست‌های شرکت شما راهنمایی کنم. چه سؤالی داری؟</div>
+      </div>
+      <div class="msg-row me">
+        <div class="msg-av"></div>
+        <div class="bubble">چقدر مرخصی استحقاقی برام مونده؟</div>
+      </div>
+      <div class="msg-row bot">
+        <div class="msg-av"></div>
+        <div class="bubble">طبق پروندهٔ شما، ۹ روز مرخصی استحقاقی باقی مانده است (از ۲۶ روز سالانه، ۱۷ روز استفاده‌شده).<span class="cite">منبع: سیاست مرخصی شرکت، بخش ۲</span></div>
+      </div>
+    </div>
+
+    <div class="suggest-row" id="suggestRow">
+      <div class="chip" data-q="مرخصی زایمان چند روزه؟">مرخصی زایمان چند روزه؟</div>
+      <div class="chip" data-q="اضافه‌کاری چطور محاسبه می‌شه؟">اضافه‌کاری چطور محاسبه می‌شه؟</div>
+      <div class="chip" data-q="سهم بیمهٔ من چقدره؟">سهم بیمهٔ من چقدره؟</div>
+      <div class="chip" data-q="فیش حقوقی رو از کجا ببینم؟">فیش حقوقی رو از کجا ببینم؟</div>
+    </div>
+
+    <div class="composer">
+      <div class="composer-inner">
+        <input type="text" id="chatInput" placeholder="سؤال خود را دربارهٔ سیاست‌های شرکت بپرسید...">
+        <button class="send-btn" id="sendBtn">↑</button>
+      </div>
+      <div class="composer-note">پاسخ‌ها پیش‌نویس اطلاعاتی هستند؛ برای تصمیمات حساس، با واحد منابع انسانی هماهنگ کنید — <b>نه جایگزین تأیید انسان</b></div>
+    </div>
+  </div>
+</div>
+
+<script src="chat.js"></script>
+
+</body>
+</html>
